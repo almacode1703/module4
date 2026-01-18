@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expression</title>
+    <style>
+        .display_result{
+            height: 50px;
+            width: 50px;
+            background-color: lightyellow;
+            border-radius: 8px;
+            border: 2px solid red;
+            text-align: center;
+            font-size: 24px;
+        }
+         .display_result::after{
+            font-size: 24px;
+         }
+    </style>
+</head>
+<body>
+    <h1>This is a classic Example of Function Expression</h1>
+    <h2>Students can store the return type of a function in a variable</h2>
+    <p id="num1">Num1 : 5</p>
+    <p id="num2">Num2 : 6</p>
+    <h3>What is the Multiplication of num1 and num2</h3>
+    <button onclick="myFunction()">Show Result</button>
+    <p class="display_result" id="display"></p>
+
+    <script>      
+            result = function(a,b){return a*b}
+            function myFunction(){
+                document.getElementById("display").innerHTML = result(5,6)
+            }
+    </script>
+</body>
+</html>

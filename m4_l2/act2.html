@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2</title>
+</head>
+<body>
+    <h2>Accessing Variables</h2>
+    <button onclick="myFunction()">Click</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+     <script>
+         var x = 5
+         function myFunction(){
+            var y = 6
+            var result = x * y;
+            document.getElementById("demo").innerHTML = "Number 1 : "+x
+            document.getElementById("demo1").innerHTML = "Number 2 : "+y
+            document.getElementById("demo2").innerHTML = "Result of Multiplication : "+result
+            alert("Result : "+result)
+            console.log(result)
+         }
+     </script>
+</body>
+</html>
