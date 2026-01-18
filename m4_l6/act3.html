@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+         html, body{
+            font-family: Helvetica;
+         }
+        .formStyle{
+            max-width: fit-content;
+            margin: 0 auto;
+            border: 1px solid lightgray;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" class="formStyle">
+        <div>
+            <label for="u_email">Email</label> <br>
+            <input type="email" name="uemail" id="u_email" >
+        </div><br>
+        <div>
+            <label for="upwd">Password</label><br>
+            <input type="password" name="pwd" id="upwd" >
+        </div><br>
+        <div>
+            <label for="uage">Age</label><br>
+            <input type="number" name="age" id="uage" >
+        </div><br>
+        <div>
+            <button type="submit" onclick="formValidate(event)">LogIn</button>
+        </div>
+        <div>
+            <p id="message"></p>
+        </div>
+    </form>
+
+
+    <script>
+        function formValidate(e){
+            e.preventDefault();
+            alert("Form Validation Started...")
+            const email = document.getElementById("u_email").value;
+            const password = document.getElementById("upwd").value;
+            const age = document.getElementById("uage").value;
+            const msg = document.getElementById("message");
+
+            let message = ''
+            if(email === ''){
+                message = "Enter Email"
+                msg.style.color = "red"
+            }
+            else if(password ===''){
+                message = "Enter Password"
+                msg.style.color = 'red'
+            }
+            else if (age === '' ){
+                message= "Enter Age"
+                msg.style.color = 'red'
+            }
+            else{
+                message = "Login Successful!!"
+                msg.style.color = "green"
+            }
+
+            msg.innerHTML = message
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+       <h1>We Will Display Alert Message using DOM methods</h1>
+       <p id="demo">Welcome To Web Dev</p>
+       <button onclick="displayMsg()">Alert</button>
+       
+       <script>
+           function displayMsg(){
+               text = document.getElementById("demo").innerHTML
+               alert(text)
+           }
+           
+       </script>
+</body>
+</html>
