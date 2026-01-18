@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <style>
+        .display_day{
+            background-color: darkgreen;
+            font-size: 24px;
+            border: 2px dotted lightcoral;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: fit-content;
+            color: yellowgreen;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>What's the day today ?</h1>
+    <button onclick="checkDay()">Check</button>
+    <p id="checkDay"></p>
+
+    <script>
+        dayIdx = new Date().getDay()
+        var day;
+
+        function checkDay() {
+            switch (dayIdx) {
+                case 0:
+                    day = "Sunday"
+                    break;
+
+                case 1:
+                    day = "Monday"
+                    break;
+
+                case 2:
+                    day = "Tuesday"
+                    break;
+
+                case 3:
+                    day = "Wednesday"
+                    break; 
+                
+                case 4:
+                    day = "Thursday"
+                    break;
+                
+                case 5:
+                    day = "Friday"
+                    break;
+                    
+                case 6:
+                    day = "Saturday"
+                    break;
+                
+                default:
+                    day:"Unknown";
+            }
+            document.getElementById("checkDay").innerHTML = day
+            document.getElementById("checkDay").classList.add('display_day')
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

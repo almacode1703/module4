@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+    <style>
+        .fruitStyle{
+            background: lightgreen;
+            border: 1px solid darkgreen;
+            border-radius: 4px;
+            width: 100px;
+            text-align: center;
+        }
+        .fruitStyle p{
+            background-color: green;
+            color: yellow;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is an Example of 'for loop'in JS</h1>
+    <h2>This code reads items from an array and then displays</h2>
+     <p>"Jackfruit"</p>
+     <p>"Guava"</p>
+     <p>"Brinjal"</p>
+     <p>"Apple"</p>
+     <p>"Avocado"</p>
+     <p>"banana"</p>
+     <button onclick="display_fruits()">Click</button>
+     <p id="fruits"></p>
+
+     <script>
+        function display_fruits(){
+            var fruit_list = ["Jackfruit", "Guava","Brinjal","Apple","Avocado","banana"]
+            var text_fruit = ""
+
+            for(var i = 0; i < fruit_list.length; i++){
+                text_fruit += "<p>"+fruit_list[i]+"</p>" + "<br/>"
+            }
+            document.getElementById("fruits").innerHTML = text_fruit
+            document.getElementById("fruits").classList.add("fruitStyle")
+
+        }
+     </script>
+</body>
+</html>
