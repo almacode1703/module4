@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create JS Objects</title>
+</head>
+
+<body>
+    <h1>This Activity will Help students to understand what is JS Objects</h1>
+    <h2>We will create a Student Object ( Key : Value ) Pair</h2>
+    <div id="student_details">
+        <label for="">Student Name : </label>
+        <p id="student_name"></p>
+        <label for="">Student Age : </label>
+        <p id="student_age"></p>
+    </div>
+
+    <script>
+        var student = {
+            name: "John",
+            age: 16
+        }
+
+        document.getElementById("student_name").innerHTML = student.name
+        document.getElementById("student_age").innerHTML = student.age
+    </script>
+</body>
+
+</html>
