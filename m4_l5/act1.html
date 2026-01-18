@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in Javascript</title>
+    <style>
+        .display_mango{
+           background-color: lightgreen;
+           padding: 1rem;
+           border: 2px solid darkgreen;
+           max-width: fit-content;
+        }
+        .display_mango::after{
+            display: inline;
+            content: "🥭";
+            margin-left: 5px;
+        }
+        button{
+            border: none;
+            background-color: navy;
+            color: #f1f1f1;
+            padding: 12px 20px;
+            border-radius: 4px;
+            box-shadow: 1px 0px 4px 0px darkgray;
+        }
+        button:hover{
+            background-color: lightblue;
+            color: navy;
+            cursor: pointer;
+            transform:scale(1.05)
+        }
+    </style>
+</head>
+<body>
+     
+     <p id="demo"></p>
+     <button id="display" onclick="showMango()">Show Mango</button>
+
+     <script>
+         fruits_list = ["Banana", "Apple", "Guava", "Grapes", "Mango"]
+           
+         function showMango(){
+             document.getElementById("demo").innerHTML = fruits_list[fruits_list.length - 1]
+             document.getElementById("demo").classList.toggle("display_mango")
+         }
+     </script>
+</body>
+</html>

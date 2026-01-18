@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+       <h1>This Project Explains Array Methods : Join(), Pop()</h1>
+       <p id="demo1"> </p>
+       <button onclick="joinItems()">Join</button>
+       <p id="demo2"></p>
+       <button onclick="popItem()">Pop</button>
+       <p id="demo3"></p>
+       <button onclick="displayItem()">Display</button>
+
+        <script>
+            fruits = ["Apple", "banana", "mango", "Cherry","Grapes" ]
+            function joinItems(){
+               joined_list = fruits.join("-")
+               document.getElementById("demo1").innerHTML = joined_list
+            }
+
+            function popItem(){
+              fruits.pop()
+              document.getElementById("demo2").innerHTML = fruits
+            }
+
+            function displayItem(){
+              document.getElementById("demo3").innerHTML = fruits 
+            }
+        </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Stack</title>
+    <style>
+        .display_style{
+            background-color: red;
+            color:yellow;
+            border:2px solid yellow;
+            border-radius: 4px;
+            padding: 4px;
+            box-shadow: 0px 0px 3px 1px lightgrey;
+        }
+    </style>
+</head>
+<body>
+     <h1>We calculate average of two numbers. Main function and a Helper function</h1>
+     <h2>Numbers are : 10, 12</h2>
+     Average of 10 and 12 is : <label id="demo"></label> <br><br>
+     <button onclick="showAverage()">Find Average</button>
+    
+    <script>
+        function addNumbers(x,y){
+            return x+y
+        }
+
+        function average(a,b){
+            return addNumbers(a,b) / 2
+        }
+        
+        function showAverage(){
+            result = average(10,12)
+            document.getElementById("demo").innerHTML = result
+            document.getElementById("demo").classList.add("display_style")
+        }
+    </script>
+</body>
+</html>
